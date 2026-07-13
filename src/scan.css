@@ -1,0 +1,178 @@
+/* ============================================
+   WoeShield Scan Page — Beta Paused
+   ============================================ */
+
+/* ---- SCAN PAGE ---- */
+.scan-page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+}
+
+.scan-container {
+  max-width: 560px;
+  text-align: center;
+}
+
+/* Shield icon */
+.scan-shield {
+  color: var(--gold);
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.scan-shield svg {
+  filter: drop-shadow(0 0 40px rgba(201,168,76,0.2));
+}
+
+/* Status pill */
+.scan-status {
+  display: inline-block;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 6px 16px;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+/* Title */
+.scan-title {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.scan-accent {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* Description */
+.scan-desc {
+  font-size: 16px;
+  color: var(--gray-300);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+/* Divider */
+.scan-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--border-strong);
+  margin: 0 auto 40px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 1s forwards;
+}
+
+/* Links section */
+.scan-links {
+  text-align: left;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1.2s forwards;
+}
+
+.scan-links-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 20px;
+}
+
+/* Link cards */
+.scan-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.scan-link:hover {
+  background: rgba(201,168,76,0.03);
+  border-color: var(--border-strong);
+}
+
+.scan-link-num {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--gray-400);
+  min-width: 20px;
+}
+
+.scan-link-content {
+  flex: 1;
+}
+
+.scan-link-title {
+  display: block;
+  font-size: 14px; font-weight: 500;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.scan-link-desc {
+  display: block;
+  font-size: 12px;
+  color: var(--gray-300);
+}
+
+.scan-link-arrow {
+  color: var(--gray-400);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.scan-link:hover .scan-link-arrow {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+/* Footer note */
+.scan-footer-note {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  animation: fadeIn 0.8s ease 1.4s forwards;
+}
+
+.scan-footer-note p {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.scan-footer-note a {
+  color: var(--gray-300);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.scan-footer-note a:hover {
+  color: var(--gold);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 640px) {
+  .scan-page { padding: 100px 18px 60px; }
+  .scan-link { padding: 16px 18px; }
+}
