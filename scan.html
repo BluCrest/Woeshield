@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WoeShield Scan — Threat Detection</title>
-  <meta name="description" content="Scan suspicious emails, links, crypto transactions and token contracts for threats." />
+  <title>WoeShield Scan — Beta Paused</title>
+  <meta name="description" content="WoeShield threat scanning is currently paused. We're building something better. Coming soon." />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#050505" />
   <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/deqbnjh8f/image/upload/f_auto,q_auto/WhatsApp_Image_2026-04-03_at_8.08.12_PM_jbn1tf" />
@@ -17,7 +17,7 @@
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="https://pointwoebegone.com" target="_blank" rel="noopener">Point Woebegone</a></li>
-      <li><span class="nav-pill">Beta</span></li>
+      <li><span class="nav-pill">Beta Paused</span></li>
     </ul>
   </nav>
 
@@ -25,102 +25,63 @@
   <section class="scan-page">
     <div class="scan-container">
 
-      <!-- Header -->
-      <div class="scan-header">
-        <div class="scan-shield">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-        </div>
-        <h1 class="scan-title">Scan for Threats</h1>
-        <p class="scan-subtitle">Paste a URL, IP address, crypto wallet, or file hash</p>
+      <!-- Shield icon -->
+      <div class="scan-shield">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <line x1="9" y1="12" x2="15" y2="12"/>
+        </svg>
       </div>
 
-      <!-- Input Form -->
-      <form class="scan-form" id="scanForm">
-        <div class="scan-input-wrap">
-          <input
-            type="text"
-            id="scanInput"
-            class="scan-input"
-            placeholder="https://suspicious-site.com/login"
-            autocomplete="off"
-            spellcheck="false"
-          />
-          <button type="submit" class="scan-btn" id="scanBtn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-            </svg>
-            Scan
-          </button>
-        </div>
-        <p class="scan-hint">
-          Try: <button type="button" class="scan-example" data-input="https://binance-secure-login.xyz/verify">phishing URL</button> ·
-          <button type="button" class="scan-example" data-input="https://binance.com">legit site</button> ·
-          <button type="button" class="scan-example" data-input="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045">Ethereum wallet</button>
-        </p>
-      </form>
+      <h1 class="scan-title">WoeShield Beta is<br/>currently <span class="scan-accent">resting.</span></h1>
+      <p class="scan-desc">
+        We're rebuilding the engine from the ground up. The next version will be faster, sharper, and more comprehensive. In the meantime, your security hasn't been forgotten — it's being perfected.
+      </p>
 
-      <!-- Loading State -->
-      <div class="scan-loading" id="scanLoading">
-        <div class="scan-spinner"></div>
-        <p>Analysing across multiple threat intelligence layers...</p>
+      <div class="scan-divider"></div>
+
+      <div class="scan-links">
+        <p class="scan-links-label">While you wait</p>
+
+        <a href="/" class="scan-link">
+          <span class="scan-link-num">01</span>
+          <div class="scan-link-content">
+            <span class="scan-link-title">Visit WoeShield</span>
+            <span class="scan-link-desc">Read about what's coming next</span>
+          </div>
+          <svg class="scan-link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://pointwoebegone.com" class="scan-link" target="_blank" rel="noopener">
+          <span class="scan-link-num">02</span>
+          <div class="scan-link-content">
+            <span class="scan-link-title">Point Woebegone</span>
+            <span class="scan-link-desc">Our parent company — privacy, security, trust</span>
+          </div>
+          <svg class="scan-link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://pointwoebegone.com/blog" class="scan-link" target="_blank" rel="noopener">
+          <span class="scan-link-num">03</span>
+          <div class="scan-link-content">
+            <span class="scan-link-title">Field Notes</span>
+            <span class="scan-link-desc">Read the story behind WoeShield on our blog</span>
+          </div>
+          <svg class="scan-link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://x.com/pointwoebegone" class="scan-link" target="_blank" rel="noopener">
+          <span class="scan-link-num">04</span>
+          <div class="scan-link-content">
+            <span class="scan-link-title">Follow Us</span>
+            <span class="scan-link-desc">Stay updated on X / Twitter</span>
+          </div>
+          <svg class="scan-link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
 
-      <!-- Results -->
-      <div class="scan-results" id="scanResults" style="display:none">
-
-        <!-- Verdict Banner -->
-        <div class="verdict" id="verdict">
-          <div class="verdict-icon" id="verdictIcon"></div>
-          <div class="verdict-text">
-            <h2 class="verdict-label" id="verdictLabel">SAFE</h2>
-            <p class="verdict-summary" id="verdictSummary"></p>
-          </div>
-          <div class="verdict-score">
-            <span class="verdict-num" id="verdictScore">0</span>
-            <span class="verdict-of">/100</span>
-          </div>
-        </div>
-
-        <!-- Risk Factors -->
-        <div class="results-section" id="riskFactorsSection" style="display:none">
-          <h3 class="results-heading">Risk Factors</h3>
-          <div class="risk-list" id="riskFactors"></div>
-        </div>
-
-        <!-- Threat Intel Details -->
-        <div class="results-section" id="threatIntelSection" style="display:none">
-          <h3 class="results-heading">Threat Intelligence</h3>
-          <div class="intel-grid" id="threatIntel"></div>
-        </div>
-
-        <!-- Crypto Analysis -->
-        <div class="results-section" id="cryptoSection" style="display:none">
-          <h3 class="results-heading">Crypto Analysis</h3>
-          <div class="crypto-grid" id="cryptoAnalysis"></div>
-        </div>
-
-        <!-- MITRE ATT&CK -->
-        <div class="results-section" id="mitreSection" style="display:none">
-          <h3 class="results-heading">MITRE ATT&CK Mapping</h3>
-          <div class="mitre-list" id="mitreMapping"></div>
-        </div>
-
-        <!-- Approach Guide -->
-        <div class="results-section" id="guideSection" style="display:none">
-          <h3 class="results-heading">What To Do</h3>
-          <div class="guide-box" id="approachGuide"></div>
-        </div>
-
-        <!-- Evidence -->
-        <div class="results-section" id="evidenceSection" style="display:none">
-          <h3 class="results-heading">Evidence</h3>
-          <div class="evidence-list" id="evidence"></div>
-        </div>
-
-        <!-- Meta -->
-        <div class="results-meta" id="resultsMeta"></div>
+      <div class="scan-footer-note">
+        <p>WoeShield is a product of <a href="https://pointwoebegone.com">Point Woebegone</a> · Privacy. Security. Trust.</p>
       </div>
 
     </div>

@@ -1,5 +1,5 @@
 /* ============================================
-   WoeShield Scan Page
+   WoeShield Scan Page — Beta Paused
    ============================================ */
 
 .scan-page {
@@ -10,17 +10,13 @@
 .scan-container {
   max-width: 640px;
   margin: 0 auto;
-}
-
-/* Header */
-.scan-header {
   text-align: center;
-  margin-bottom: 40px;
 }
 
+/* Shield */
 .scan-shield {
   color: var(--gold);
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   opacity: 0;
   animation: fadeUp 0.6s ease 0.1s forwards;
 }
@@ -29,453 +25,141 @@
   filter: drop-shadow(0 0 30px rgba(201,168,76,0.25));
 }
 
+/* Title */
 .scan-title {
   font-family: var(--serif);
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 400;
   color: var(--white);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  line-height: 1.2;
   opacity: 0;
   animation: fadeUp 0.6s ease 0.2s forwards;
 }
 
-.scan-subtitle {
+.scan-accent {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* Description */
+.scan-desc {
   font-size: 15px;
   color: var(--gray-300);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 40px;
   opacity: 0;
   animation: fadeUp 0.6s ease 0.3s forwards;
 }
 
-/* Form */
-.scan-form {
-  margin-bottom: 40px;
+/* Divider */
+.scan-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 40px;
   opacity: 0;
   animation: fadeUp 0.6s ease 0.4s forwards;
 }
 
-.scan-input-wrap {
+/* Links section */
+.scan-links {
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.5s forwards;
+}
+
+.scan-links-label {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.scan-link {
   display: flex;
-  gap: 0;
-  border: 1px solid var(--border-strong);
-  background: rgba(255,255,255,0.02);
-  transition: border-color 0.3s;
-}
-
-.scan-input-wrap:focus-within {
-  border-color: var(--gold);
-}
-
-.scan-input {
-  flex: 1;
-  background: transparent;
-  border: none;
+  align-items: center;
+  gap: 16px;
   padding: 16px 20px;
-  font-size: 15px;
-  font-family: 'DM Sans', sans-serif;
-  color: var(--white);
-  outline: none;
-}
-
-.scan-input::placeholder {
-  color: var(--gray-400);
-}
-
-.scan-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 24px;
-  background: var(--gold);
-  color: #050505;
-  border: none;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: 'DM Sans', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s;
-  white-space: nowrap;
-}
-
-.scan-btn:hover {
-  background: #c9a84c;
-}
-
-.scan-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.scan-hint {
-  margin-top: 12px;
-  font-size: 13px;
-  color: var(--gray-400);
-}
-
-.scan-example {
-  background: none;
-  border: none;
-  color: var(--gold);
-  cursor: pointer;
-  font-size: 13px;
-  font-family: 'DM Sans', sans-serif;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  padding: 0;
-}
-
-.scan-example:hover {
-  color: #c9a84c;
-}
-
-/* Loading */
-.scan-loading {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 48px 0;
-  color: var(--gray-300);
-  font-size: 14px;
-}
-
-.scan-spinner {
-  width: 32px;
-  height: 32px;
-  border: 2px solid var(--border);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* Results */
-.scan-results {
-  animation: fadeUp 0.4s ease;
-}
-
-/* Verdict Banner */
-.verdict {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 24px;
   border: 1px solid var(--border);
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+  text-decoration: none;
   transition: all 0.3s;
 }
 
-.verdict-safe {
-  border-color: #22c55e;
-  background: rgba(34,197,94,0.05);
+.scan-link:hover {
+  border-color: var(--border-strong);
+  background: rgba(255,255,255,0.01);
 }
 
-.verdict-safe .verdict-icon { color: #22c55e; }
-.verdict-safe .verdict-label { color: #22c55e; }
-.verdict-safe .verdict-num { color: #22c55e; }
-
-.verdict-suspicious {
-  border-color: #f59e0b;
-  background: rgba(245,158,11,0.05);
+.scan-link-num {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--gray-400);
+  min-width: 20px;
 }
 
-.verdict-suspicious .verdict-icon { color: #f59e0b; }
-.verdict-suspicious .verdict-label { color: #f59e0b; }
-.verdict-suspicious .verdict-num { color: #f59e0b; }
-
-.verdict-danger {
-  border-color: #ef4444;
-  background: rgba(239,68,68,0.05);
-}
-
-.verdict-danger .verdict-icon { color: #ef4444; }
-.verdict-danger .verdict-label { color: #ef4444; }
-.verdict-danger .verdict-num { color: #ef4444; }
-
-.verdict-error {
-  border-color: var(--gray-400);
-  background: rgba(255,255,255,0.02);
-}
-
-.verdict-error .verdict-icon { color: var(--gray-400); }
-.verdict-error .verdict-label { color: var(--gray-400); }
-.verdict-error .verdict-num { color: var(--gray-400); }
-
-.verdict-icon svg {
-  width: 32px;
-  height: 32px;
-}
-
-.verdict-text {
+.scan-link-content {
   flex: 1;
+  text-align: left;
 }
 
-.verdict-label {
-  font-family: var(--serif);
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 4px;
-}
-
-.verdict-summary {
+.scan-link-title {
+  display: block;
   font-size: 14px;
-  color: var(--gray-300);
-  line-height: 1.5;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 2px;
 }
 
-.verdict-score {
-  text-align: right;
-  min-width: 60px;
-}
-
-.verdict-num {
-  font-family: var(--serif);
-  font-size: 32px;
-  font-weight: 400;
-}
-
-.verdict-of {
+.scan-link-desc {
   display: block;
   font-size: 12px;
   color: var(--gray-400);
 }
 
-/* Results Sections */
-.results-section {
-  margin-bottom: 24px;
-}
-
-.results-heading {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+.scan-link-arrow {
   color: var(--gray-400);
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
+  transition: color 0.3s;
+  flex-shrink: 0;
 }
 
-/* Risk Factors */
-.risk-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 14px;
-  margin-bottom: 6px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.01);
-}
-
-.risk-badge {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 2px 8px;
-  border: 1px solid;
-  white-space: nowrap;
-}
-
-.risk-critical .risk-badge { color: #ef4444; border-color: #ef4444; }
-.risk-high .risk-badge { color: #f97316; border-color: #f97316; }
-.risk-medium .risk-badge { color: #f59e0b; border-color: #f59e0b; }
-.risk-low .risk-badge { color: #6b7280; border-color: #6b7280; }
-.risk-safe .risk-badge { color: #22c55e; border-color: #22c55e; }
-
-.risk-desc {
-  font-size: 13px;
-  color: var(--gray-300);
-  line-height: 1.5;
-}
-
-/* Threat Intel Grid */
-.intel-grid {
-  display: grid;
-  gap: 6px;
-}
-
-.intel-item {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 14px;
-  border: 1px solid var(--border);
-  font-size: 13px;
-}
-
-.intel-ok { border-left: 2px solid #22c55e; }
-.intel-skip { border-left: 2px solid var(--gray-400); }
-.intel-error { border-left: 2px solid #ef4444; }
-
-.intel-name {
-  color: var(--white);
-  font-weight: 500;
-}
-
-.intel-status {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.intel-ok .intel-status { color: #22c55e; }
-.intel-skip .intel-status { color: var(--gray-400); }
-.intel-error .intel-status { color: #ef4444; }
-
-.intel-detail {
-  text-align: right;
-  color: var(--gray-300);
-  font-size: 12px;
-}
-
-/* Crypto Grid */
-.crypto-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-}
-
-.crypto-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 14px;
-  border: 1px solid var(--border);
-  font-size: 13px;
-}
-
-.crypto-label { color: var(--gray-300); }
-.crypto-val { color: var(--white); font-weight: 500; }
-
-/* MITRE ATT&CK */
-.mitre-list {
-  display: grid;
-  gap: 6px;
-}
-
-.mitre-item {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 14px;
-  border: 1px solid var(--border);
-  font-size: 13px;
-}
-
-.mitre-tech {
-  font-family: 'SF Mono', 'Fira Code', monospace;
-  font-size: 12px;
-  color: var(--gold);
-  background: rgba(201,168,76,0.08);
-  padding: 2px 8px;
-  white-space: nowrap;
-}
-
-.mitre-name { color: var(--white); }
-.mitre-tactic { color: var(--gray-400); font-size: 12px; }
-
-/* Approach Guide */
-.guide-box {
-  padding: 20px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.01);
-}
-
-.guide-rec {
-  font-size: 15px;
-  color: var(--white);
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-
-.guide-actions {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.guide-actions li {
-  padding: 6px 0;
-  padding-left: 16px;
-  position: relative;
-  font-size: 13px;
-  color: var(--gray-300);
-  line-height: 1.5;
-}
-
-.guide-actions li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
+.scan-link:hover .scan-link-arrow {
   color: var(--gold);
 }
 
-/* Evidence */
-.evidence-list {
-  display: grid;
-  gap: 6px;
-}
-
-.evidence-item {
-  padding: 10px 14px;
-  border: 1px solid var(--border);
-  font-size: 13px;
-  color: var(--gray-300);
-  font-family: 'SF Mono', 'Fira Code', monospace;
-}
-
-/* Meta */
-.results-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 24px;
-  padding-top: 16px;
+/* Footer note */
+.scan-footer-note {
+  padding-top: 32px;
   border-top: 1px solid var(--border);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--gray-400);
+}
+
+.scan-footer-note a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.scan-footer-note a:hover {
+  color: #c9a84c;
 }
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 640px) {
   .scan-page { padding: 80px 16px 60px; }
 
-  .scan-input-wrap {
+  .scan-link {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
-  .scan-btn {
-    justify-content: center;
-  }
-
-  .verdict {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .verdict-score {
-    text-align: center;
-  }
-
-  .intel-item {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-
-  .intel-detail {
-    text-align: left;
-  }
-
-  .crypto-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mitre-item {
-    grid-template-columns: 1fr;
-    gap: 4px;
+  .scan-link-arrow {
+    display: none;
   }
 }
